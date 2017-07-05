@@ -1,0 +1,12 @@
+<%= simple_form_for(@restaurant) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :name, input_html: { placeholder: "Spaggetti Factory"} %>
+    <%= f.input :address %>
+    <%= f.input :category, as: :select, collection: Restaurant::CATEGORIES, include_blank: "Select a category" %>
+    <%= f.input :phone_number, input_html: { placeholder: "000-123-4567"} %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
